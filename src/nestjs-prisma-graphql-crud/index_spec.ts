@@ -4,11 +4,12 @@ import * as path from 'path';
 
 const collectionPath = path.join(__dirname, '../collection.json');
 
-describe('nestjs-prisma-graphql-crud', () => {
+describe('prisma-nestjs-graphql-crud', () => {
   it('works', async () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = await runner.runSchematic('nestjs-prisma-graphql-crud', {}, Tree.empty());
+    const tree = await runner.runSchematic('prisma-nestjs-graphql-crud', {}, Tree.empty());
 
     expect(tree.files).toEqual([]);
   });
 });
+

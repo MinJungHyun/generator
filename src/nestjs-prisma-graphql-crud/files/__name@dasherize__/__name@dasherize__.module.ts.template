@@ -1,0 +1,9 @@
+import { Module } from '@nestjs/common';
+import { PrismaService } from '../../prisma.service';
+import { <%= pascalName %>Resolver } from './<%= kebabName %>.resolver.ts';
+import { <%= pascalName %>Service } from './<%= kebabName %>.service.ts';
+
+@Module({
+  providers: [<%= pascalName %>Resolver, <%= pascalName %>Service, PrismaService]
+})
+export class <%= pascalName %>Module {}

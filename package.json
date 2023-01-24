@@ -4,7 +4,8 @@
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start_sample": "schematics ./:nestjs-prisma-graphql-crud --name=abc",
+    "generator": "schematics ./:prisma-nestjs-graphql-crud --dry-run=false",
+    "generator_dryrun": "schematics ./:prisma-nestjs-graphql-crud",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [

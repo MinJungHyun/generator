@@ -1,0 +1,85 @@
+import { FindUnique<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-unique-<%= kebabName %>.args';
+import { Args, Query, Mutation, Resolver } from '@nestjs/graphql';
+import { AffectedRows } from '@generated/prisma/affected-rows.output';
+import { <%= pascalName %> } from '@generated/<%= kebabName %>/<%= kebabName %>.model';
+import { Aggregate<%= pascalName %> } from '@generated/<%= kebabName %>/aggregate-<%= kebabName %>.output';
+import { <%= pascalName %>GroupBy } from '@generated/<%= kebabName %>/<%= kebabName %>-group-by.output';
+
+import { <%= pascalName %>Service } from './<%= kebabName %>.service.ts';
+import { <%= pascalName %>AggregateArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-aggregate.args';
+import { FindFirst<%= pascalName %>OrThrowArgs } from '@generated/<%= kebabName %>/find-first-<%= kebabName %>-or-throw.args';
+import { FindMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-many-<%= kebabName %>.args';
+import { CreateOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/create-one-<%= kebabName %>.args';
+import { CreateMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/create-many-<%= kebabName %>.args';
+import { UpdateOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/update-one-<%= kebabName %>.args';
+import { UpdateMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/update-many-<%= kebabName %>.args';
+import { UpsertOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/upsert-one-<%= kebabName %>.args';
+import { DeleteOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/delete-one-<%= kebabName %>.args';
+import { DeleteMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/delete-many-<%= kebabName %>.args';
+import { Prisma } from '@prisma/client';
+import { <%= pascalName %>GroupByArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-group-by.args';
+
+@Resolver(() => <%= pascalName %>)
+export class <%= pascalName %>Resolver {
+  constructor(private readonly <%= camelName %>Service: <%= pascalName %>Service) {}
+
+  @Query(() => <%= pascalName %>, { nullable: false })
+  findFirst<%= pascalName %>(@Args() args: FindFirst<%= pascalName %>OrThrowArgs) {
+    return this.<%= camelName %>Service.findFirst(args);
+  }
+
+  @Query(() => <%= pascalName %>, { nullable: false })
+  findUnique<%= pascalName %>(@Args() args: FindUnique<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.findUnique(args);
+  }
+
+  @Query(() => [<%= pascalName %>], { nullable: false })
+  findMany<%= pascalName %>(@Args() args: FindMany<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.findMany(args);
+  }
+
+  @Query(() => Aggregate<%= pascalName %>, { nullable: false })
+  aggregate<%= pascalName %>(@Args() args: <%= pascalName %>AggregateArgs) {
+    return this.<%= camelName %>Service.aggregate(args);
+  }
+
+  @Query(() => [<%= pascalName %>GroupBy], { nullable: false })
+  groupBy<%= pascalName %>(@Args() args: <%= pascalName %>GroupByArgs) {
+    return this.<%= camelName %>Service.groupBy(args);
+  }
+
+  @Mutation(() => <%= pascalName %>, { nullable: true })
+  create<%= pascalName %>(@Args() args: CreateOne<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.create(args);
+  }
+
+  @Mutation(() => AffectedRows, { nullable: true })
+  createMany<%= pascalName %>(@Args() args: CreateMany<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.createMany(args);
+  }
+
+  @Mutation(() => <%= pascalName %>, { nullable: true })
+  update<%= pascalName %>(@Args() args: UpdateOne<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.update(args);
+  }
+
+  @Mutation(() => AffectedRows, { nullable: true })
+  updateMany<%= pascalName %>(@Args() args: UpdateMany<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.updateMany(args);
+  }
+
+  @Mutation(() => <%= pascalName %>, { nullable: true })
+  upsert<%= pascalName %>(@Args() args: UpsertOne<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.upsert(args);
+  }
+
+  @Mutation(() => <%= pascalName %>, { nullable: true })
+  delete<%= pascalName %>(@Args() args: DeleteOne<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.delete(args);
+  }
+
+  @Mutation(() => AffectedRows, { nullable: true })
+  deleteMany<%= pascalName %>(@Args() args: DeleteMany<%= pascalName %>Args) {
+    return this.<%= camelName %>Service.deleteMany(args);
+  }
+}

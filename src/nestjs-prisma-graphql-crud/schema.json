@@ -3,12 +3,17 @@
     "name": {
       "type": "string",
       "minLength": 1,
-      "default": "world",
-      "x-prompt": "What is your name?"
+      "default": "example-cart",
+      "x-prompt": "What is your domain name?"
     },
-    "useColor": {
-      "type": "boolean",
-      "x-prompt": "Would you like the response in color?"
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "default": "src/modules",
+      "x-prompt": "where do you want to create the module?"
     }
-  }
+  },
+  "required": [
+    "name"
+  ]
 }

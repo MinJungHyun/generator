@@ -32,7 +32,7 @@ schematics <스키매틱-프로젝트-경로>:<스키매틱-이름> --<필수-�
 
 ```
 //해당내역 폴더에 진입하여
-schematics ../generator/:nestjs-prisma-graphql-crud --name=Order --drt-run=false
+schematics ../generator/:prisma-nestjs-graphql-crud --name=Order --drt-run=false
 ```
 
 # input 입력받기
@@ -44,10 +44,10 @@ https://angular.kr/guide/schematics-authoring
 
 ```
 "schematics": {
-    "nestjs-prisma-graphql-crud": {
+    "prisma-nestjs-graphql-crud": {
       "description": "A blank schematic.",
-      "factory": "./nestjs-prisma-graphql-crud/index#nestjsPrismaGraphqlCrud",
-      "schema": "./nestjs-prisma-graphql-crud/schema.json" <--this
+      "factory": "./prisma-nestjs-graphql-crud/index#prismaNestjsGraphqlCrud",
+      "schema": "./prisma-nestjs-graphql-crud/schema.json" <--this
     }
   }
 ```
@@ -60,10 +60,10 @@ https://angular.kr/guide/schematics-authoring
 
 ```
 "schematics": {
-    "nestjs-prisma-graphql-crud": {
+    "prisma-nestjs-graphql-crud": {
       "description": "A blank schematic.",
-      "factory": "./nestjs-prisma-graphql-crud/index#nestjsPrismaGraphqlCrud",
-      "schema": "./nestjs-prisma-graphql-crud/schema.json",
+      "factory": "./prisma-nestjs-graphql-crud/index#prismaNestjsGraphqlCrud",
+      "schema": "./prisma-nestjs-graphql-crud/schema.json",
       "aliases": ["npgc"] <--this
     }
   }

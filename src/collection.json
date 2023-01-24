@@ -1,12 +1,12 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "nestjs-prisma-graphql-crud": {
-      "description": "A blank schematic.",
-      "factory": "./nestjs-prisma-graphql-crud/index#nestjsPrismaGraphqlCrud",
-      "schema": "./nestjs-prisma-graphql-crud/schema.json",
+    "prisma-nestjs-graphql-crud": {
+      "description": "Create crud for prisma-nestjs-graphql ",
+      "factory": "./prisma-nestjs-graphql-crud/index#prismaNestjsGraphqlCrud",
+      "schema": "./prisma-nestjs-graphql-crud/schema.json",
       "aliases": [
-        "npgc"
+        "prisma-crud"
       ]
     }
   }
