@@ -30,6 +30,42 @@ schematics <스키매틱-프로젝트-경로>:<스키매틱-이름> --<필수-�
 
 # 실행시
 
-해당내역 폴더에 진입하여
+```
+//해당내역 폴더에 진입하여
 schematics ../generator/:nestjs-prisma-graphql-crud --name=Order --drt-run=false
+```
+
+# input 입력받기
+
+https://angular.kr/guide/schematics-authoring
+
+1. /src/{generator-name}/schema.json 생성
+2. collection에 schema 연결하기
+
+```
+"schematics": {
+    "nestjs-prisma-graphql-crud": {
+      "description": "A blank schematic.",
+      "factory": "./nestjs-prisma-graphql-crud/index#nestjsPrismaGraphqlCrud",
+      "schema": "./nestjs-prisma-graphql-crud/schema.json" <--this
+    }
+  }
+```
+
+# generator에 별칭주기(aliases)
+
+https://angular.kr/guide/schematics-authoring
+
+1. collection에 aliases 설정
+
+```
+"schematics": {
+    "nestjs-prisma-graphql-crud": {
+      "description": "A blank schematic.",
+      "factory": "./nestjs-prisma-graphql-crud/index#nestjsPrismaGraphqlCrud",
+      "schema": "./nestjs-prisma-graphql-crud/schema.json",
+      "aliases": ["npgc"] <--this
+    }
+  }
+```
 
