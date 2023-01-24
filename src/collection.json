@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "nestjs-prisma-graphql-crud": {
+      "description": "A blank schematic.",
+      "factory": "./nestjs-prisma-graphql-crud/index#nestjsPrismaGraphqlCrud"
+    }
+  }
+}
