@@ -1,4 +1,4 @@
-# 참고문언
+# 참고
 
 https://angular.kr/guide/schematics-authoring
 
