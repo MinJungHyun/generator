@@ -5,7 +5,7 @@ import { <%= pascalName %> } from '@generated/<%= kebabName %>/<%= kebabName %>.
 import { Aggregate<%= pascalName %> } from '@generated/<%= kebabName %>/aggregate-<%= kebabName %>.output';
 import { <%= pascalName %>GroupBy } from '@generated/<%= kebabName %>/<%= kebabName %>-group-by.output';
 
-import { <%= pascalName %>Service } from './<%= kebabName %>.service.ts';
+import { <%= pascalName %>Service } from './<%= kebabName %>.service';
 import { <%= pascalName %>AggregateArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-aggregate.args';
 import { FindFirst<%= pascalName %>OrThrowArgs } from '@generated/<%= kebabName %>/find-first-<%= kebabName %>-or-throw.args';
 import { FindMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-many-<%= kebabName %>.args';

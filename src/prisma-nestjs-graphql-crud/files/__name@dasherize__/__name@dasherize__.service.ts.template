@@ -47,7 +47,7 @@ export class <%= pascalName %>Service {
     return this.prisma.<%= kebabName %>.createMany(args);
   }
 
-  update(args: Prisma.<%= pascalName %>UpdateArgs) {
+  update(args: UpdateOne<%= pascalName %>Args) {
     return this.prisma.<%= kebabName %>.update(args);
   }
 
