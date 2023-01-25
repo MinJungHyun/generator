@@ -1,69 +1,71 @@
-import { CreateMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/create-many-<%= kebabName %>.args';
-import { CreateOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/create-one-<%= kebabName %>.args';
-import { DeleteMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/delete-many-<%= kebabName %>.args';
-import { DeleteOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/delete-one-<%= kebabName %>.args';
-import { FindFirst<%= pascalName %>OrThrowArgs } from '@generated/<%= kebabName %>/find-first-<%= kebabName %>-or-throw.args';
-import { FindMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-many-<%= kebabName %>.args';
-import { FindUnique<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-unique-<%= kebabName %>.args';
-import { <%= pascalName %>AggregateArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-aggregate.args';
-import { <%= pascalName %>GroupByArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-group-by.args';
-import { UpdateMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/update-many-<%= kebabName %>.args';
-import { UpdateOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/update-one-<%= kebabName %>.args';
-import { UpsertOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/upsert-one-<%= kebabName %>.args';
+import {
+  CreateMany<%= pascalName %>Args,
+  CreateOne<%= pascalName %>Args,
+  DeleteMany<%= pascalName %>Args,
+  DeleteOne<%= pascalName %>Args,
+  FindFirst<%= pascalName %>OrThrowArgs,
+  FindMany<%= pascalName %>Args,
+  FindUnique<%= pascalName %>Args,
+  <%= pascalName %>AggregateArgs,
+  <%= pascalName %>GroupByArgs,
+  UpdateMany<%= pascalName %>Args,
+  UpdateOne<%= pascalName %>Args,
+  UpsertOne<%= pascalName %>Args
+} from '@generated';
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../prisma.service';
-import { Prisma } from '@prisma/client';
+
 @Injectable()
 export class <%= pascalName %>Service {
   constructor(private prisma: PrismaService) {}
 
   async findFirst(args: FindFirst<%= pascalName %>OrThrowArgs) {
-    return await this.prisma.<%= kebabName %>.findFirst(args);
+    return await this.prisma.<%= camelName %>.findFirst(args);
   }
 
   findUnique(args: FindUnique<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.findUnique(args);
+    return this.prisma.<%= camelName %>.findUnique(args);
   }
 
   findMany(args: FindMany<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.findMany(args);
+    return this.prisma.<%= camelName %>.findMany(args);
   }
 
   aggregate(args: <%= pascalName %>AggregateArgs) {
-    return this.prisma.<%= kebabName %>.aggregate(args);
+    return this.prisma.<%= camelName %>.aggregate(args);
   }
 
   groupBy(args: <%= pascalName %>GroupByArgs) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    return this.prisma.<%= kebabName %>.groupBy(args);
+    return this.prisma.<%= camelName %>.groupBy(args);
   }
 
   create(args: CreateOne<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.create(args);
+    return this.prisma.<%= camelName %>.create(args);
   }
 
   createMany(args: CreateMany<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.createMany(args);
+    return this.prisma.<%= camelName %>.createMany(args);
   }
 
   update(args: UpdateOne<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.update(args);
+    return this.prisma.<%= camelName %>.update(args);
   }
 
   updateMany(args: UpdateMany<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.updateMany(args);
+    return this.prisma.<%= camelName %>.updateMany(args);
   }
 
   upsert(args: UpsertOne<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.upsert(args);
+    return this.prisma.<%= camelName %>.upsert(args);
   }
 
   delete(args: DeleteOne<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.delete(args);
+    return this.prisma.<%= camelName %>.delete(args);
   }
 
   deleteMany(args: DeleteMany<%= pascalName %>Args) {
-    return this.prisma.<%= kebabName %>.deleteMany(args);
+    return this.prisma.<%= camelName %>.deleteMany(args);
   }
 }

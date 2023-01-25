@@ -1,23 +1,23 @@
-import { FindUnique<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-unique-<%= kebabName %>.args';
-import { Args, Query, Mutation, Resolver } from '@nestjs/graphql';
+import {
+  Aggregate<%= pascalName %>,
+  CreateOne<%= pascalName %>Args,
+  CreateMany<%= pascalName %>Args,
+  DeleteOne<%= pascalName %>Args,
+  DeleteMany<%= pascalName %>Args,
+  FindFirst<%= pascalName %>OrThrowArgs,
+  FindMany<%= pascalName %>Args,
+  FindUnique<%= pascalName %>Args,
+  <%= pascalName %>,
+  <%= pascalName %>AggregateArgs,
+  <%= pascalName %>GroupBy,
+  <%= pascalName %>GroupByArgs,
+  UpdateMany<%= pascalName %>Args,
+  UpdateOne<%= pascalName %>Args,
+  UpsertOne<%= pascalName %>Args
+} from '@generated';
 import { AffectedRows } from '@generated/prisma/affected-rows.output';
-import { <%= pascalName %> } from '@generated/<%= kebabName %>/<%= kebabName %>.model';
-import { Aggregate<%= pascalName %> } from '@generated/<%= kebabName %>/aggregate-<%= kebabName %>.output';
-import { <%= pascalName %>GroupBy } from '@generated/<%= kebabName %>/<%= kebabName %>-group-by.output';
-
+import { Args, Query, Mutation, Resolver } from '@nestjs/graphql';
 import { <%= pascalName %>Service } from './<%= kebabName %>.service';
-import { <%= pascalName %>AggregateArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-aggregate.args';
-import { FindFirst<%= pascalName %>OrThrowArgs } from '@generated/<%= kebabName %>/find-first-<%= kebabName %>-or-throw.args';
-import { FindMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/find-many-<%= kebabName %>.args';
-import { CreateOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/create-one-<%= kebabName %>.args';
-import { CreateMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/create-many-<%= kebabName %>.args';
-import { UpdateOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/update-one-<%= kebabName %>.args';
-import { UpdateMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/update-many-<%= kebabName %>.args';
-import { UpsertOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/upsert-one-<%= kebabName %>.args';
-import { DeleteOne<%= pascalName %>Args } from '@generated/<%= kebabName %>/delete-one-<%= kebabName %>.args';
-import { DeleteMany<%= pascalName %>Args } from '@generated/<%= kebabName %>/delete-many-<%= kebabName %>.args';
-import { Prisma } from '@prisma/client';
-import { <%= pascalName %>GroupByArgs } from '@generated/<%= kebabName %>/<%= kebabName %>-group-by.args';
 
 @Resolver(() => <%= pascalName %>)
 export class <%= pascalName %>Resolver {
