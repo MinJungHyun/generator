@@ -4,6 +4,8 @@
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "generator:admin": "schematics ./:cypress-admin-ui --dry-run=false",
+    "generator:admin_dryrun": "schematics ./:cypress-admin-ui",
     "generator": "schematics ./:prisma-nestjs-graphql-crud --dry-run=false",
     "generator_dryrun": "schematics ./:prisma-nestjs-graphql-crud",
     "test": "npm run build && jasmine src/**/*_spec.js"

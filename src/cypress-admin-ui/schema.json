@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "default": "Y",
+      "x-prompt": "생성합니다"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -8,6 +8,11 @@
       "aliases": [
         "prisma-crud"
       ]
+    },
+    "cypress-admin-ui": {
+      "description": "Create crud for prisma-nestjs-graphql ",
+      "factory": "./cypress-admin-ui/index#cypressAdminUi",
+      "schema": "./cypress-admin-ui/schema.json"
     }
   }
 }

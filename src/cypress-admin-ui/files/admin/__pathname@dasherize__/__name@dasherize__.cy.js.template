@@ -1,0 +1,18 @@
+import { firstUpperCase, initDescribe } from "../../../utils/functions";
+import { DEV_admin_injectTokenToCookie } from "../../../utils/injectTokenToCookie";
+
+const info = {
+  pageName: '<%= pageName %>',
+  pageUrl: '<%= pageUrl %>',
+  gqlName: '<%= gqlName %>',
+  searchKeyword: '10 20',
+  isSearch: true,
+}
+
+describe(info.pageName + " 테스트", () => {
+  beforeEach(() => {
+    DEV_admin_injectTokenToCookie();
+  });
+
+  initDescribe(info);
+});
